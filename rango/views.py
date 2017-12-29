@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import render
 
 def index(request):
-    html = "Hello Rango!<br>" \
-           "Click <a href='/rango/about/'>here</a> to go to the about page"
-    return HttpResponse(html)
+    context_dict = {'boldmessage': "Crunchy, creamy, cookie, candy, cupcake"}
+    return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
     html = "Rango says here is the about page<br>" \
