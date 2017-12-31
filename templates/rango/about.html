@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+
+    <head>
+        <title>About Page</title>
+    </head>
+
+    <body>
+        <h1>About Rango</h1>
+        <div>
+            Hey readers! <br />
+            <strong>{{ boldmessage }}</strong><br />
+            <img src="{% static "images/rango.jpg" %}"
+                 alt="picture of rango"
+                 width="250px" />
+        </div>
+        <div>
+            Click <a href="/rango/index/">here</a> to go to the index page <br />
+            <img src="{{ MEDIA_URL }}lebron.jpg"
+                 alt="picture of rango from media"
+                 width="400px" />
+        </div>
+    </body>
+
+</html>
